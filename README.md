@@ -32,6 +32,7 @@ Built on a **deterministic verification architecture**: Google Gemini extracts a
 - [Visual Previews & Screenshots](#visual-previews--screenshots)
 - [System Architecture (Dual-Backend Flow)](#system-architecture)
 - [Backup / Secondary Architecture (Render & Supabase)](#backup--secondary-architecture-render--supabase)
+- [Geographic Coverage & Supported Documents](#geographic-coverage--supported-documents)
 - [Key Features](#key-features)
 - [Quick Start (Local Development)](#quick-start-local-development)
 - [Deployment Guide](#deployment-guide)
@@ -146,6 +147,23 @@ To guarantee zero downtime and eliminate single-cloud vendor lock-in, the system
   - `auto`: Pings AWS API Gateway. If unresponsive or returning 5xx/429, seamlessly flips traffic to Render.
   - `secondary`: Routes all traffic directly to Render (ideal for development, staging, or teams without AWS access).
   - `primary`: Strictly routes to AWS.
+
+---
+
+## Geographic Coverage & Supported Documents
+
+### 🌍 Geographic Coverage & Jurisdictions
+| Region | Framework / Law | Target Scope |
+|---|---|---|
+| 🇪🇺 **European Union & UK** | **GDPR & UK DPA** | All 27 EU member states + UK (and any global company processing EU/UK resident data). |
+| 🇺🇸 **United States (USA)** | **CCPA / CPRA & SOC 2** | California & US privacy rights, opt-outs, and nationwide AICPA SOC 2 SaaS security criteria. |
+| 🌐 **Global / Multinational** | **ISO/IEC 27701:2019** | International standard accepted across 160+ countries for PIMS Controllers & Processors. |
+
+### 📑 Supported Document Types & Formats
+- **Privacy Policies & Notices (`privacy_notice`)**: Customer notices, website policies, cookie statements (evaluates lawful bases, user rights, retention, contact info).
+- **Data Processing Agreements (`dpa`)**: B2B vendor DPAs, SCCs, subprocessor terms (evaluates processor duties, breach reporting, audit clauses).
+- **Security Policies (`security_policy`)**: InfoSec guidelines, vendor security standards (evaluates access control, incident response, encryption commitments).
+- **Supported File Formats**: `.pdf` (text-searchable), `.docx` (Word agreements), and `.txt` (plain text contracts).
 
 ---
 
