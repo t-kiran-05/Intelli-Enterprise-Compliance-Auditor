@@ -34,6 +34,14 @@ node_modules
 .DS_Store
 *.tsbuildinfo
 
-#mypersonalnotes
+#mypersonalnotes & developer planning
 terraform-notes-for-
 guide-notes-for-me
+*project-map*
+*PROJECT_MAP*
+*failover*
+*FAILOVER*
+docs/PROJECT_MAP.md
+docs/FAILOVER.md
+docs/README.md
+scripts/README.md

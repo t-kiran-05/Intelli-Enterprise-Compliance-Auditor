@@ -34,27 +34,23 @@ Built on a **deterministic verification architecture**: Google Gemini extracts a
 
 ## Visual Previews & Screenshots
 
-> **Note:** Screenshots and architecture diagrams can be placed in `docs/images/`.
+### 1. Compliance Dashboard Overview (Dark & Light Mode)
+![Compliance Dashboard Overview](docs/images/Compliance%20Dashboard%20Overview.png)
+*Figure 1: Main compliance overview showing radial gauges, document upload dropzone, and evaluated framework scores.*
 
-### 1. Compliance Dashboard Overview
-<!-- Place your dashboard overview screenshot in docs/images/dashboard-overview.png -->
-![Compliance Dashboard Overview](docs/images/dashboard-overview.png)
-*Figure 1: Main compliance overview showing radial gauges, document upload zone, and framework scores.*
+![Dashboard Light Mode](docs/images/dashboard-light.png)
+*Figure 2: Clean enterprise light-mode interface with persistent theme toggle.*
 
-### 2. Risk Heatmap Matrix & 3-Pillar Assessment
-<!-- Place your risk heatmap screenshot in docs/images/risk-heatmap.png -->
-![Risk Heatmap Matrix](docs/images/risk-heatmap.png)
-*Figure 2: Risk matrix classifying findings across Legal, Security, and Operational pillars.*
+### 2. Framework Compliance Summary & Radar Gauges
+![Compliance Summary](docs/images/compliance-summary.png)
+*Figure 3: Multi-framework assessment across GDPR, CCPA/CPRA, SOC 2, and ISO/IEC 27701.*
 
-### 3. Requirements Breakdown & Verbatim Evidence Quotes
-<!-- Place your evidence breakdown screenshot in docs/images/requirements-evidence.png -->
-![Requirements Breakdown](docs/images/requirements-evidence.png)
-*Figure 3: Granular checklist items showing verbatim quotes extracted and verified from contract text.*
+### 3. Risk Heatmap Matrix & Remediation Recommendations
+![Risk Heatmap & Recommendations](docs/images/risk-heatmap%26recommendations.png)
+*Figure 4: 3-Pillar risk matrix classifying issues across Legal, Security, and Operational dimensions.*
 
-### 4. AWS Serverless Cloud Architecture Diagram
-<!-- Place your AWS architecture diagram in docs/images/aws-architecture.png -->
-![AWS Serverless Architecture Diagram](docs/images/aws-architecture.png)
-*Figure 4: End-to-end AWS serverless architecture (API Gateway, S3, Lambda, DynamoDB).*
+![Risks & Suggestions](docs/images/risks%26suggestions.png)
+*Figure 5: Granular findings with severity tagging (Critical, Medium, Low) and actionable recommendations.*
 
 ---
 
