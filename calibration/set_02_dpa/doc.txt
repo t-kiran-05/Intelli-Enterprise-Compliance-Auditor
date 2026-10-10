@@ -1,0 +1,34 @@
+DATA PROCESSING ADDENDUM (DPA)
+Between Customer ("Data Controller") and CloudSaaS Technologies Inc. ("Data Processor")
+
+1. SCOPE AND PROCESSING DETAILS
+1.1 The Processor shall process personal data solely on documented instructions from the Controller, including regarding international data transfers, unless required to do so by applicable Union or Member State law.
+1.2 The subject matter, duration, nature, and purpose of processing, and types of personal data are set out in Schedule A.
+
+2. CONFIDENTIALITY AND PERSONNEL
+2.1 The Processor ensures that persons authorized to process personal data have committed themselves to confidentiality or are under an appropriate statutory obligation of confidentiality.
+
+3. SECURITY OF PROCESSING (GDPR ART. 32 / ISO 27701)
+3.1 Taking into account the state of the art, Processor implements technical and organizational measures to ensure a level of security appropriate to the risk, including:
+- Encryption of personal data in transit using TLS 1.3 and at rest using AES-256.
+- Role-based access control and multi-factor authentication (MFA) for administrative access.
+- Redundancy, business continuity, and daily verified data backups.
+- Regular vulnerability scanning and independent SOC 2 Type II audits.
+
+4. SUB-PROCESSORS
+4.1 Controller grants general authorization to Processor to engage Sub-processors. Processor maintains an active list of Sub-processors at cloudsass.example/subprocessors.
+4.2 Processor shall inform Controller of any intended changes concerning the addition or replacement of Sub-processors at least thirty (30) days in advance, giving Controller opportunity to object.
+4.3 Processor imposes equivalent data protection obligations on any Sub-processor by written contract. Processor remains fully liable to Controller for the performance of Sub-processors' obligations.
+
+5. ASSISTANCE TO CONTROLLER
+5.1 Taking into account the nature of processing, Processor assists Controller by appropriate technical and organizational measures in responding to data subjects exercising their rights under Chapter III GDPR.
+5.2 Processor assists Controller in ensuring compliance with obligations pursuant to Articles 32 to 36 GDPR (Security, Breach Notification, DPIA, and Prior Consultation).
+
+6. PERSONAL DATA BREACH NOTIFICATION
+6.1 Processor shall notify Controller without undue delay, and in any event within 48 hours, after becoming aware of a personal data breach affecting Controller personal data.
+
+7. DELETION OR RETURN OF PERSONAL DATA
+7.1 Upon termination of the Services, Processor shall, at the choice of the Controller, delete or return all personal data to the Controller and delete existing copies unless Union or Member State law requires storage.
+
+8. AUDITS AND INSPECTIONS
+8.1 Processor shall make available to Controller all information necessary to demonstrate compliance with Article 28 GDPR and allow for and contribute to audits, including inspections, conducted by Controller or an independent auditor mandated by Controller, upon reasonable notice.

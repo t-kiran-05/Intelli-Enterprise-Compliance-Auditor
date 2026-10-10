@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: compliance-audit-server
+    runtime: docker
+    dockerfilePath: server/Dockerfile
+    dockerContext: .
+    region: oregon
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SECRET_KEY
+        sync: false
+      - key: BACKEND_SHARED_TOKEN
+        sync: false
+      - key: AUDIT_MODELS
+        sync: false
+      - key: GEMINI_TIER
+        value: free
+      - key: ALLOWED_ORIGIN
+        sync: false
+      - key: PORT
+        value: "8000"

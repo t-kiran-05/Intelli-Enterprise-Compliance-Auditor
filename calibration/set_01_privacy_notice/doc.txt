@@ -1,0 +1,41 @@
+ACME CORPORATION GLOBAL PRIVACY NOTICE
+Effective Date: October 1, 2026
+
+1. IDENTIFICATION OF CONTROLLER AND DPO
+Acme Corporation Inc., located at 100 Technology Plaza, San Francisco, CA 94105, United States, acts as the data controller for personal data processed through our websites and enterprise cloud services. For any privacy inquiries, reach us at privacy@acmecorp.example or our EU Representative Acme Ireland Ltd, Dublin 2, Ireland.
+Our appointed Data Protection Officer can be reached directly at dpo@acmecorp.example.
+
+2. CATEGORIES OF PERSONAL DATA COLLECTED
+We collect the following categories of personal data:
+- Identifiers: name, business email, phone number, IP address.
+- Commercial data: purchase histories, licensing subscriptions.
+- Internet and technical activity: log files, device telemetry, browser type.
+- Geolocation data: country and city inferred from IP addresses.
+
+3. PURPOSES AND LEGAL BASES FOR PROCESSING
+Under GDPR Article 6, we process data under the following legal bases:
+- Performance of a Contract (Art. 6(1)(b)): To administer user accounts and fulfill software subscriptions.
+- Legitimate Interests (Art. 6(1)(f)): For network and cybersecurity defense, fraud prevention, and performance analytics. Our legitimate interest is maintaining service integrity.
+- Legal Obligation (Art. 6(1)(c)): Tax reporting and regulatory compliance.
+- Consent (Art. 6(1)(a)): Marketing communications and non-essential cookies. You have the right to withdraw consent at any time.
+
+4. RECIPIENTS AND INTERNATIONAL DATA TRANSFERS
+Personal data is shared with cloud infrastructure providers (AWS, Supabase) and billing processors. Where personal data is transferred outside the European Economic Area (EEA), we rely on EU Standard Contractual Clauses (SCCs) adopted under Commission Implementing Decision (EU) 2021/914, supplemented by technical safeguards including AES-256 encryption.
+
+5. RETENTION SCHEDULE AND STORAGE CRITERIA
+Personal data is retained only for the duration of the customer relationship plus five (5) statutory years following account termination for tax audit compliance. Log telemetry is purged after 90 days.
+
+6. DATA SUBJECT RIGHTS (GDPR & UK GDPR)
+You have the right to request access to your personal data, rectification of inaccurate records, erasure ("right to be forgotten"), restriction of processing, and data portability. You have the explicit right to object at any time to processing based on legitimate interests or direct marketing. To exercise these rights, submit a request via privacy@acmecorp.example. You also have the right to lodge a complaint with your local supervisory authority (e.g., the Irish DPC or UK ICO).
+
+7. CALIFORNIA CONSUMER PRIVACY STATEMENT (CCPA / CPRA)
+Under the California Consumer Privacy Act:
+- Notice at Collection: Categories collected include Identifiers, Commercial Information, and Internet Activity.
+- Purpose: Service fulfillment, security, and internal analytics.
+- Retention: As outlined in Section 5.
+- We DO NOT sell personal information and we DO NOT share personal information for cross-context behavioral advertising.
+- Consumers have the Right to Know, Right to Delete, and Right to Correct inaccurate personal data without discrimination.
+- Sensitive Personal Information: We do not collect or process sensitive personal information to infer consumer characteristics.
+
+8. AUTOMATED DECISION-MAKING
+We do not subject users to automated decision-making or profiling having legal or similarly significant effects.

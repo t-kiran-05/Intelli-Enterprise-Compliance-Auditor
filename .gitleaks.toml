@@ -1,0 +1,16 @@
+# Gitleaks Configuration for ai-compliance-dashboard
+title = "gitleaks configuration"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Global allowlists for public configs and sample templates"
+paths = [
+    '''^\.env\.example$''',
+    '''package-lock\.json$''',
+    '''node_modules/''',
+    '''\.next/''',
+    '''\.venv/''',
+]
+

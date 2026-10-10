@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "audit_result.schema.json",
+  "title": "AuditResult",
+  "description": "Shared contract for compliance audit results returned by both AWS and FastAPI backends.",
+  "type": "object",
+  "required": ["DocumentId", "Status"],
+  "properties": {
+    "DocumentId": {
+      "type": "string",
+      "description": "Unique document identifier (S3 key or Supabase Storage path)."
+    },
+    "Status": {
+      "type": "string",
+      "enum": ["COMPLETED", "PROCESSING", "AWAITING_UPLOAD", "FAILED", "NOT_FOUND"]
+    },
+    "scoring_version": { "type": "string" },
+    "overall_score": { "type": ["number", "null"] },
+    "OverallScore": { "type": ["number", "null"] },
+    "Score": { "type": ["number", "null"] },
+    "GdprScore": { "type": ["number", "null"] },
+    "Soc2Score": { "type": ["number", "null"] },
+    "CcpaScore": { "type": ["number", "null"] },
+    "Iso27701Score": { "type": ["number", "null"] },
+    "frameworks": {
+      "type": "object",
+      "properties": {
+        "gdpr": { "$ref": "#/$defs/FrameworkDetail" },
+        "soc2": { "$ref": "#/$defs/FrameworkDetail" },
+        "ccpa": { "$ref": "#/$defs/FrameworkDetail" },
+        "iso27701": { "$ref": "#/$defs/FrameworkDetail" }
+      },
+      "additionalProperties": { "$ref": "#/$defs/FrameworkDetail" }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": { "type": "string" },
+          "severity": { "type": "string" },
+          "issue": { "type": "string" },
+          "location": { "type": "string" },
+          "recommendation": { "type": "string" }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "status"],
+        "properties": {
+          "id": { "type": "string" },
+          "status": { "type": "string" },
+          "document": { "type": "string" },
+          "section": { "type": "string" },
+          "evidence_quote": { "type": "string" },
+          "evidence_verified": { "type": "boolean" },
+          "downgraded_from": { "type": "string" },
+          "agreement": { "type": "number" },
+          "agreement_pct": { "type": "number" },
+          "note": { "type": "string" },
+          "recommendation": { "type": "string" },
+          "critical": { "type": "boolean" }
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "scoring_version": { "type": "string" },
+        "as_of": { "type": "string" },
+        "doc_types": { "type": "array", "items": { "type": "string" } },
+        "model": { "type": "string" },
+        "passes": { "type": "integer" },
+        "vision_mode": { "type": "boolean" },
+        "llm_tier": { "type": "string" },
+        "llm_data_use_warning": { "type": "string" },
+        "unscored_reason": { "type": "string" },
+        "checklist_version": {},
+        "checklist_source": { "type": "string" }
+      }
+    },
+    "forward_looking": { "type": "array" },
+    "placeholders": { "type": "array" },
+    "Error": { "type": "string" },
+    "owner_id": { "type": "string" }
+  },
+  "if": {
+    "properties": { "Status": { "const": "COMPLETED" } }
+  },
+  "then": {
+    "required": ["DocumentId", "Status", "overall_score", "frameworks", "items"]
+  },
+  "$defs": {
+    "FrameworkDetail": {
+      "type": "object",
+      "required": ["score", "status"],
+      "properties": {
+        "score": { "type": ["number", "null"] },
+        "status": { "type": "string" },
+        "summary": { "type": "string" },
+        "rationale": { "type": "string" },
+        "coverage_pct": { "type": ["number", "null"] },
+        "critical_gaps": { "type": "array", "items": { "type": "string" } },
+        "unverifiable": { "type": "array", "items": { "type": "string" } },
+        "disclosure_only": { "type": "boolean" },
+        "counts": {
+          "type": "object",
+          "properties": {
+            "met": { "type": "integer" },
+            "partial": { "type": "integer" },
+            "not_met": { "type": "integer" },
+            "not_applicable": { "type": "integer" },
+            "total_scored": { "type": "integer" }
+          }
+        }
+      }
+    }
+  }
+}
+

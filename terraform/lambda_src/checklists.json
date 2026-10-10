@@ -1,0 +1,2338 @@
+{
+ "version": "2026.10.2",
+ "generated": "2026-10-05",
+ "doc_types": [
+  "privacy_notice",
+  "dpa",
+  "security_policy"
+ ],
+ "notes": {
+  "iso27701": "Numbering follows ISO/IEC 27701:2019. A later edition may restructure clauses; verify and bump the checklist version if you migrate.",
+  "ccpa": "ADMT rows carry effective_from 2027-01-01 and are reported as forward-looking until then. Verify CPPA regulation dates against cppa.ca.gov before relying on them.",
+  "soc2": "SOC 2 is an attestation of operating effectiveness. Rows marked public_disclosure_expected are scored from public notices only in 'penalize' mode and are reported as disclosure-only.",
+  "scope": "This checklist is a working audit aid, not legal advice. Have counsel review it before commercial use."
+ },
+ "requirements": [
+  {
+   "id": "gdpr.13_1_a",
+   "framework": "gdpr",
+   "citation": "GDPR Art 13(1)(a)/14(1)(a)",
+   "title": "Controller identity and contact",
+   "looks_for": "Names the controller (and EU representative if applicable) with contact details such as postal address, email or contact form.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 3,
+   "critical": true,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.14_1_d",
+   "framework": "gdpr",
+   "citation": "GDPR Art 14(1)(d)",
+   "title": "Categories of personal data",
+   "looks_for": "Lists the categories of personal data processed.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.13_1_b",
+   "framework": "gdpr",
+   "citation": "GDPR Art 13(1)(b), Art 37(7)",
+   "title": "Data Protection Officer contact",
+   "looks_for": "Gives DPO contact details (email or postal address).",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": true,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": "data protection officer|\\bDPO\\b",
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.13_1_c",
+   "framework": "gdpr",
+   "citation": "GDPR Art 13(1)(c)",
+   "title": "Purposes and legal basis per purpose",
+   "looks_for": "States each purpose (or purpose group) AND the Art 6 legal basis that applies to it.",
+   "partial": "Lists purposes and lawful bases separately without mapping bases to purposes.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 3,
+   "critical": true,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.13_1_d",
+   "framework": "gdpr",
+   "citation": "GDPR Art 13(1)(d)",
+   "title": "Legitimate interests identified",
+   "looks_for": "Where legitimate interests are relied on, identifies the specific interests pursued.",
+   "partial": "Names interests only generically.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": true,
+   "na_when": "The document does not rely on legitimate interests.",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.13_1_e",
+   "framework": "gdpr",
+   "citation": "GDPR Art 13(1)(e)",
+   "title": "Recipients or categories of recipients",
+   "looks_for": "Identifies recipients or categories of recipients of personal data.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.13_1_f",
+   "framework": "gdpr",
+   "citation": "GDPR Art 13(1)(f), Arts 44-49",
+   "title": "Third-country transfers and safeguards",
+   "looks_for": "Discloses transfers outside the EEA/UK, the safeguard relied on (adequacy, SCCs, BCRs, DPF) and how to obtain a copy.",
+   "partial": "Names the mechanism but gives no way to obtain a copy.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": true,
+   "na_when": "The document states there are no transfers outside the EEA/UK.",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": "standard contractual clauses|\\bSCCs?\\b|adequacy|binding corporate rules|data privacy framework|\\bDPF\\b|transfer mechanism|data transfer agreement|adequacy decision|cross[\\s\\-]border transfer",
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.13_2_a",
+   "framework": "gdpr",
+   "citation": "GDPR Art 13(2)(a)",
+   "title": "Retention period or criteria",
+   "looks_for": "States the retention period, or the criteria used to determine it, ideally per data category.",
+   "partial": "Generic criteria only (e.g., 'as long as necessary') with no periods or categories.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.13_2_b",
+   "framework": "gdpr",
+   "citation": "GDPR Art 13(2)(b); Arts 15-20",
+   "title": "Data subject rights",
+   "looks_for": "Lists access, rectification, erasure, restriction, objection and portability, and how to exercise them.",
+   "partial": "Some rights missing or no exercise mechanism.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 3,
+   "critical": true,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.13_2_c",
+   "framework": "gdpr",
+   "citation": "GDPR Art 13(2)(c), Art 7(3)",
+   "title": "Right to withdraw consent",
+   "looks_for": "States the right to withdraw consent at any time and how.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": true,
+   "na_when": "No processing is based on consent.",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.13_2_d",
+   "framework": "gdpr",
+   "citation": "GDPR Art 13(2)(d)",
+   "title": "Right to complain to a supervisory authority",
+   "looks_for": "States the right to lodge a complaint with a supervisory authority.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": "supervisory authorit|data protection authorit|information commissioner|\\bICO\\b|\\bEDPB\\b|lodge a complaint|right to complain",
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.13_2_e",
+   "framework": "gdpr",
+   "citation": "GDPR Art 13(2)(e)",
+   "title": "Statutory/contractual requirement to provide data",
+   "looks_for": "States whether providing data is a statutory or contractual requirement and the consequences of not providing it.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.13_2_f",
+   "framework": "gdpr",
+   "citation": "GDPR Art 13(2)(f), Art 22",
+   "title": "Automated decision-making and profiling",
+   "looks_for": "States whether automated decision-making or profiling with legal/similar effects exists, with meaningful information about the logic, or states that none exists (scoped to the EEA/UK).",
+   "partial": "Statement exists but is scoped only to another jurisdiction or lacks logic/consequences.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.14_2_f",
+   "framework": "gdpr",
+   "citation": "GDPR Art 14(2)(f)",
+   "title": "Source of data not collected from the data subject",
+   "looks_for": "States the source of data obtained indirectly, including publicly accessible sources.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": true,
+   "na_when": "All data is collected directly from the data subject.",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.21_4",
+   "framework": "gdpr",
+   "citation": "GDPR Art 21(4)",
+   "title": "Right to object presented clearly and separately",
+   "looks_for": "Draws the right to object (including to direct marketing and legitimate-interest processing) to attention explicitly and separately.",
+   "partial": "Right to object is listed among other rights without distinct presentation.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.9",
+   "framework": "gdpr",
+   "citation": "GDPR Art 9(2)",
+   "title": "Special category data condition",
+   "looks_for": "If special category data (ethnicity, health, religion, biometrics, etc.) is processed, states the Art 9(2) condition (e.g., explicit consent).",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 3,
+   "critical": true,
+   "na_allowed": true,
+   "na_when": "No special category data is collected or processed.",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.12_1",
+   "framework": "gdpr",
+   "citation": "GDPR Art 12(1)",
+   "title": "Concise, transparent, intelligible form",
+   "looks_for": "Plain language with no unresolved cross-references, duplicated or contradictory sections.",
+   "partial": "Mostly clear but contains duplicated sections, dangling references or contradictions.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.13_3",
+   "framework": "gdpr",
+   "citation": "GDPR Art 12/13(3)",
+   "title": "Notice of changes",
+   "looks_for": "Describes how changes to the notice are communicated and the notice period.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.28_3_intro",
+   "framework": "gdpr",
+   "citation": "GDPR Art 28(3) (opening)",
+   "title": "Subject-matter, duration, nature, purpose, data types, data subjects",
+   "looks_for": "Specifies subject-matter, duration, nature and purpose of processing, types of personal data and categories of data subjects.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.28_3_a",
+   "framework": "gdpr",
+   "citation": "GDPR Art 28(3)(a)",
+   "title": "Processing only on documented instructions",
+   "looks_for": "Processor acts only on documented controller instructions, including for transfers, unless required by law.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 3,
+   "critical": true,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.28_3_b",
+   "framework": "gdpr",
+   "citation": "GDPR Art 28(3)(b)",
+   "title": "Confidentiality commitment",
+   "looks_for": "Persons authorised to process are bound by confidentiality.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.28_3_c",
+   "framework": "gdpr",
+   "citation": "GDPR Art 28(3)(c), Art 32",
+   "title": "Security measures",
+   "looks_for": "Processor implements Art 32 technical and organisational measures.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 3,
+   "critical": true,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.28_3_d",
+   "framework": "gdpr",
+   "citation": "GDPR Art 28(2),(4)",
+   "title": "Sub-processor conditions",
+   "looks_for": "Requires prior authorisation (specific or general with objection right) and flow-down of the same obligations to sub-processors, with processor liability.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 3,
+   "critical": true,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.28_3_e",
+   "framework": "gdpr",
+   "citation": "GDPR Art 28(3)(e)",
+   "title": "Assistance with data subject requests",
+   "looks_for": "Processor assists the controller to respond to data subject rights requests.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.28_3_f",
+   "framework": "gdpr",
+   "citation": "GDPR Art 28(3)(f); Arts 32-36",
+   "title": "Assistance with security, breach notification and DPIAs",
+   "looks_for": "Processor assists with Arts 32-36 and notifies the controller of a personal data breach without undue delay.",
+   "partial": "Breach notification present without a timeframe or without assistance obligations.",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 3,
+   "critical": true,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.28_3_g",
+   "framework": "gdpr",
+   "citation": "GDPR Art 28(3)(g)",
+   "title": "Deletion or return at end of services",
+   "looks_for": "At the controller's choice, deletes or returns all personal data at the end of services, and deletes copies.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.28_3_h",
+   "framework": "gdpr",
+   "citation": "GDPR Art 28(3)(h)",
+   "title": "Audit and information rights",
+   "looks_for": "Processor makes available information to demonstrate compliance and allows audits/inspections.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": "audit|inspect",
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.28_3_inf",
+   "framework": "gdpr",
+   "citation": "GDPR Art 28(3) (final para)",
+   "title": "Notice of infringing instructions",
+   "looks_for": "Processor informs the controller if an instruction infringes data protection law.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.46_dpa",
+   "framework": "gdpr",
+   "citation": "GDPR Arts 44-46",
+   "title": "Transfer mechanism in DPA",
+   "looks_for": "Specifies the transfer mechanism (SCCs, adequacy, BCRs, DPF) for any restricted transfers.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": true,
+   "na_when": "The DPA states no restricted transfers occur.",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.32_1_a",
+   "framework": "gdpr",
+   "citation": "GDPR Art 32(1)(a)",
+   "title": "Pseudonymisation and encryption",
+   "looks_for": "Describes encryption and/or pseudonymisation of personal data.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.32_1_b",
+   "framework": "gdpr",
+   "citation": "GDPR Art 32(1)(b)",
+   "title": "Confidentiality, integrity, availability and resilience",
+   "looks_for": "Describes ongoing measures for confidentiality, integrity, availability and resilience of systems.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.32_1_c",
+   "framework": "gdpr",
+   "citation": "GDPR Art 32(1)(c)",
+   "title": "Ability to restore availability",
+   "looks_for": "Describes backup/restore or recovery capability after an incident.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.32_1_d",
+   "framework": "gdpr",
+   "citation": "GDPR Art 32(1)(d)",
+   "title": "Regular testing and evaluation",
+   "looks_for": "Describes regular testing, assessment or evaluation of the effectiveness of security measures.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.33_proc",
+   "framework": "gdpr",
+   "citation": "GDPR Art 33-34",
+   "title": "Breach detection and notification procedure",
+   "looks_for": "Defines a breach detection/escalation procedure including notification to the controller or authority within 72 hours where applicable.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 3,
+   "critical": true,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": "72[- ]?hours?|breach|incident",
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "gdpr.5_1_e",
+   "framework": "gdpr",
+   "citation": "GDPR Art 5(1)(e)",
+   "title": "Storage limitation and disposal",
+   "looks_for": "Defines retention periods or deletion triggers and secure disposal or return of personal data.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "Regulation (EU) 2016/679"
+  },
+  {
+   "id": "ccpa.110_collected",
+   "framework": "ccpa",
+   "citation": "Cal. Civ. Code \u00a71798.110, \u00a71798.130(a)(5)(B)",
+   "title": "Categories of PI collected (last 12 months)",
+   "looks_for": "Lists the categories of personal information collected in the preceding 12 months.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.110_sources",
+   "framework": "ccpa",
+   "citation": "\u00a71798.110, \u00a71798.130(a)(5)(B)",
+   "title": "Categories of sources",
+   "looks_for": "Lists categories of sources of personal information.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.110_purposes",
+   "framework": "ccpa",
+   "citation": "\u00a71798.110, \u00a71798.130(a)(5)(B)",
+   "title": "Business or commercial purposes",
+   "looks_for": "States the business or commercial purposes for collecting, selling or sharing PI.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.130_disclosed",
+   "framework": "ccpa",
+   "citation": "\u00a71798.130(a)(5)(C)",
+   "title": "Categories disclosed for a business purpose and recipients",
+   "looks_for": "Lists categories of PI disclosed for a business purpose AND the categories of recipients.",
+   "partial": "Categories disclosed but recipients not mapped.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.130_sold_shared",
+   "framework": "ccpa",
+   "citation": "\u00a71798.130(a)(5)(C)",
+   "title": "Categories sold or shared and third-party categories",
+   "looks_for": "States categories of PI sold or shared and categories of third parties, or states that PI is not sold or shared.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.100_retention",
+   "framework": "ccpa",
+   "citation": "\u00a71798.100(a)(3)",
+   "title": "Retention per category",
+   "looks_for": "States how long each category is retained, or the criteria used to determine retention.",
+   "partial": "Generic criteria only; not per category.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.140_spi",
+   "framework": "ccpa",
+   "citation": "\u00a71798.100(a)(2), \u00a71798.140(ae)",
+   "title": "Sensitive personal information categories",
+   "looks_for": "Identifies categories of sensitive PI collected and the purposes of use.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": true,
+   "na_when": "No sensitive personal information is collected.",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.110_know",
+   "framework": "ccpa",
+   "citation": "\u00a71798.110, \u00a71798.115",
+   "title": "Right to know",
+   "looks_for": "Explains the right to know categories and specific pieces of PI and how to request.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.105_delete",
+   "framework": "ccpa",
+   "citation": "\u00a71798.105",
+   "title": "Right to delete",
+   "looks_for": "Explains the right to delete, exceptions, and that service providers are instructed to delete.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.106_correct",
+   "framework": "ccpa",
+   "citation": "\u00a71798.106",
+   "title": "Right to correct",
+   "looks_for": "Explains the right to correct inaccurate PI.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.120_optout",
+   "framework": "ccpa",
+   "citation": "\u00a71798.120, \u00a71798.135",
+   "title": "Right to opt out of sale/sharing",
+   "looks_for": "Explains the right to opt out and provides a conspicuous link/method; or states clearly that PI is not sold or shared.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 3,
+   "critical": true,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": "do not (sell|share)|opt[- ]?out|global privacy control|\\bGPC\\b|not (sell|share)",
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.121_limit",
+   "framework": "ccpa",
+   "citation": "\u00a71798.121, 11 CCR \u00a77027",
+   "title": "Right to limit use of sensitive PI",
+   "looks_for": "Offers the right to limit, or states SPI is used only for permitted purposes.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": true,
+   "na_when": "No sensitive PI is collected or it is used only for permitted purposes.",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.7025_gpc",
+   "framework": "ccpa",
+   "citation": "11 CCR \u00a77025",
+   "title": "Opt-out preference signal (GPC)",
+   "looks_for": "States that opt-out preference signals such as GPC are honored.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": true,
+   "na_when": "The document states PI is neither sold nor shared.",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": "global privacy control|\\bGPC\\b|opt-out preference signal",
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.125_nondisc",
+   "framework": "ccpa",
+   "citation": "\u00a71798.125",
+   "title": "Non-discrimination",
+   "looks_for": "Commits not to discriminate against consumers exercising rights.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.130_methods",
+   "framework": "ccpa",
+   "citation": "\u00a71798.130(a)(1)",
+   "title": "Request methods",
+   "looks_for": "Provides methods to submit requests (two methods unless an online-only exemption applies).",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.7011_agent",
+   "framework": "ccpa",
+   "citation": "11 CCR \u00a77011(e)",
+   "title": "Authorized agent process",
+   "looks_for": "Explains how an authorized agent can submit requests.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.7011_verify",
+   "framework": "ccpa",
+   "citation": "11 CCR \u00a77011(e), \u00a77060",
+   "title": "Verification process",
+   "looks_for": "Explains how identity is verified before fulfilling requests.",
+   "partial": "States verification may occur without explaining what is requested.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.130_timing",
+   "framework": "ccpa",
+   "citation": "\u00a71798.130(a)(2), (b)",
+   "title": "Response timing",
+   "looks_for": "States 45-day response (+45 extension) and applies any two-per-12-month limit only to right-to-know requests.",
+   "partial": "Timing present but request limit framed more broadly than the statute allows.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.130_date",
+   "framework": "ccpa",
+   "citation": "\u00a71798.130(a)(5)",
+   "title": "Date last updated",
+   "looks_for": "Shows the date last updated and is reviewed at least every 12 months.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.120_minors",
+   "framework": "ccpa",
+   "citation": "\u00a71798.120(c)",
+   "title": "Minors under 16",
+   "looks_for": "States PI of known consumers under 16 is not sold or shared without opt-in.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": true,
+   "na_when": "The document states no sale or sharing occurs.",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.1798_83",
+   "framework": "ccpa",
+   "citation": "Cal. Civ. Code \u00a71798.83",
+   "title": "Shine the Light",
+   "looks_for": "Addresses disclosure to third parties for their direct marketing and a request method.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.100_notice",
+   "framework": "ccpa",
+   "citation": "\u00a71798.100(a); 11 CCR \u00a77012",
+   "title": "Notice at collection",
+   "looks_for": "Notice at collection covers categories, purposes, whether sold/shared, retention and a link to the policy.",
+   "partial": "Notice present but missing retention or sold/shared statements.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.admt",
+   "framework": "ccpa",
+   "citation": "11 CCR Art. 11 (\u00a77200 et seq.)",
+   "title": "ADMT pre-use notice and rights",
+   "looks_for": "If ADMT is used for significant decisions: pre-use notice, opt-out and access rights are provided.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": true,
+   "na_when": "The document states ADMT is not used for significant decisions.",
+   "public_disclosure_expected": false,
+   "effective_from": "2027-01-01",
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.sp_purposes",
+   "framework": "ccpa",
+   "citation": "\u00a71798.100(d), \u00a71798.140(ag); 11 CCR \u00a77051",
+   "title": "Specified limited business purposes",
+   "looks_for": "Contract specifies the limited and specified business purposes for processing.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 3,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.sp_no_sell_share",
+   "framework": "ccpa",
+   "citation": "\u00a71798.100(d), \u00a71798.140(ag); 11 CCR \u00a77051",
+   "title": "Prohibition on selling or sharing",
+   "looks_for": "Prohibits the service provider from selling or sharing personal information.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 3,
+   "critical": true,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.sp_no_use_outside",
+   "framework": "ccpa",
+   "citation": "\u00a71798.100(d), \u00a71798.140(ag); 11 CCR \u00a77051",
+   "title": "Prohibition on retaining, using or disclosing outside the contract",
+   "looks_for": "Prohibits retaining, using or disclosing PI for any purpose other than the specified business purposes or outside the direct business relationship.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 3,
+   "critical": true,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.sp_no_combine",
+   "framework": "ccpa",
+   "citation": "\u00a71798.100(d), \u00a71798.140(ag); 11 CCR \u00a77051",
+   "title": "Prohibition on combining PI",
+   "looks_for": "Prohibits combining PI received with PI from other sources except as permitted.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.sp_comply",
+   "framework": "ccpa",
+   "citation": "\u00a71798.100(d), \u00a71798.140(ag); 11 CCR \u00a77051",
+   "title": "CCPA compliance and same level of protection",
+   "looks_for": "Requires compliance with the CCPA and the same level of privacy protection as the business.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.sp_audit",
+   "framework": "ccpa",
+   "citation": "\u00a71798.100(d), \u00a71798.140(ag); 11 CCR \u00a77051",
+   "title": "Business monitoring rights",
+   "looks_for": "Grants the business rights to take reasonable steps to ensure use is consistent with its obligations (audits, assessments).",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.sp_notify",
+   "framework": "ccpa",
+   "citation": "\u00a71798.100(d), \u00a71798.140(ag); 11 CCR \u00a77051",
+   "title": "Notice if unable to comply",
+   "looks_for": "Requires notice to the business if the service provider can no longer meet its obligations.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.sp_remediate",
+   "framework": "ccpa",
+   "citation": "\u00a71798.100(d), \u00a71798.140(ag); 11 CCR \u00a77051",
+   "title": "Stop and remediate unauthorized use",
+   "looks_for": "Gives the business the right to stop and remediate unauthorized use of PI.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "ccpa.sp_subcontract",
+   "framework": "ccpa",
+   "citation": "\u00a71798.100(d), \u00a71798.140(ag); 11 CCR \u00a77051",
+   "title": "Subcontractor flow-down",
+   "looks_for": "Requires written contracts with subcontractors containing the same restrictions and notice to the business.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "CCPA/CPRA + CPPA regulations (11 CCR \u00a77000 et seq.)"
+  },
+  {
+   "id": "soc2.cc6_1",
+   "framework": "soc2",
+   "citation": "CC6.1",
+   "title": "Logical access controls",
+   "looks_for": "Describes logical access security: authentication, MFA, role-based access and least privilege.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 3,
+   "critical": true,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": true,
+   "effective_from": null,
+   "must_match": "access control|multi-?factor|\\bMFA\\b|authenticat|role-based|\\bRBAC\\b|least privilege|logical access",
+   "active": true,
+   "standard": "AICPA Trust Services Criteria (2017, rev. 2022)"
+  },
+  {
+   "id": "soc2.cc6_2",
+   "framework": "soc2",
+   "citation": "CC6.2",
+   "title": "Provisioning and de-provisioning",
+   "looks_for": "Describes user access provisioning, periodic review and prompt revocation on termination.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "AICPA Trust Services Criteria (2017, rev. 2022)"
+  },
+  {
+   "id": "soc2.cc6_3",
+   "framework": "soc2",
+   "citation": "CC6.3",
+   "title": "Role-based access and segregation of duties",
+   "looks_for": "Describes role-based access, least privilege and segregation of duties.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "AICPA Trust Services Criteria (2017, rev. 2022)"
+  },
+  {
+   "id": "soc2.cc6_6",
+   "framework": "soc2",
+   "citation": "CC6.6",
+   "title": "Boundary protection",
+   "looks_for": "Describes firewalls, network segmentation or intrusion detection protecting system boundaries.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "AICPA Trust Services Criteria (2017, rev. 2022)"
+  },
+  {
+   "id": "soc2.cc6_7",
+   "framework": "soc2",
+   "citation": "CC6.7",
+   "title": "Encryption in transit and at rest",
+   "looks_for": "Describes encryption of data in transit (e.g., TLS 1.2+) and at rest (e.g., AES-256).",
+   "partial": "Only one of in-transit/at-rest, or no algorithms/standards named.",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 3,
+   "critical": true,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": true,
+   "effective_from": null,
+   "must_match": "encrypt|\\bTLS\\b|\\bAES\\b|cryptograph",
+   "active": true,
+   "standard": "AICPA Trust Services Criteria (2017, rev. 2022)"
+  },
+  {
+   "id": "soc2.cc7_1",
+   "framework": "soc2",
+   "citation": "CC7.1",
+   "title": "Vulnerability management",
+   "looks_for": "Describes vulnerability scanning, patching and penetration testing.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "AICPA Trust Services Criteria (2017, rev. 2022)"
+  },
+  {
+   "id": "soc2.cc7_2",
+   "framework": "soc2",
+   "citation": "CC7.2",
+   "title": "Security monitoring and anomaly detection",
+   "looks_for": "Describes monitoring of systems for anomalies and security events, including logging.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": true,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "AICPA Trust Services Criteria (2017, rev. 2022)"
+  },
+  {
+   "id": "soc2.cc7_3",
+   "framework": "soc2",
+   "citation": "CC7.3-CC7.4",
+   "title": "Incident response",
+   "looks_for": "Describes documented incident response: triage, containment, escalation, communication and post-incident review.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 3,
+   "critical": true,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": true,
+   "effective_from": null,
+   "must_match": "incident|breach",
+   "active": true,
+   "standard": "AICPA Trust Services Criteria (2017, rev. 2022)"
+  },
+  {
+   "id": "soc2.cc8_1",
+   "framework": "soc2",
+   "citation": "CC8.1",
+   "title": "Change management",
+   "looks_for": "Describes authorised, tested and approved changes before production.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "AICPA Trust Services Criteria (2017, rev. 2022)"
+  },
+  {
+   "id": "soc2.a1_2",
+   "framework": "soc2",
+   "citation": "A1.2",
+   "title": "Backups and recovery",
+   "looks_for": "Describes scheduled backups, resilience and recovery capabilities (RTO/RPO).",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 3,
+   "critical": true,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": true,
+   "effective_from": null,
+   "must_match": "backup|disaster recovery|restor|business continuity",
+   "active": true,
+   "standard": "AICPA Trust Services Criteria (2017, rev. 2022)"
+  },
+  {
+   "id": "soc2.a1_3",
+   "framework": "soc2",
+   "citation": "A1.3",
+   "title": "Recovery testing",
+   "looks_for": "Describes periodic testing of recovery procedures.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "AICPA Trust Services Criteria (2017, rev. 2022)"
+  },
+  {
+   "id": "soc2.cc9_2",
+   "framework": "soc2",
+   "citation": "CC9.2",
+   "title": "Vendor and subprocessor risk management",
+   "looks_for": "Describes vendor due diligence, contractual security requirements and ongoing monitoring.",
+   "partial": "Vendors contractually bound but no due diligence or monitoring described.",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": true,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "AICPA Trust Services Criteria (2017, rev. 2022)"
+  },
+  {
+   "id": "soc2.p4_3",
+   "framework": "soc2",
+   "citation": "P4.2-P4.3",
+   "title": "Retention and secure disposal",
+   "looks_for": "Describes retention limits and secure disposal of personal information.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "AICPA Trust Services Criteria (2017, rev. 2022)"
+  },
+  {
+   "id": "soc2.assurance",
+   "framework": "soc2",
+   "citation": "SOC 2 report / attestation",
+   "title": "Reference to independent attestation",
+   "looks_for": "References an independent SOC 2 (or equivalent) attestation or report availability.",
+   "partial": "",
+   "assessable_in": [],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": true,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "AICPA Trust Services Criteria (2017, rev. 2022)"
+  },
+  {
+   "id": "iso.A_7_2_1",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.2.1",
+   "title": "Identify and document purpose",
+   "looks_for": "Documents the specific purposes of processing.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_2_2",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.2.2",
+   "title": "Identify lawful basis",
+   "looks_for": "Identifies the lawful basis for processing.",
+   "partial": "Bases named but not mapped to purposes.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_2_3",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.2.3",
+   "title": "Determine when and how consent is obtained",
+   "looks_for": "States when consent is required and how it is obtained.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_2_6",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.2.6",
+   "title": "Contracts with PII processors",
+   "looks_for": "States that processors are bound by contract on privacy/security.",
+   "partial": "Contracts mentioned without terms.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_3_3",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.3.3",
+   "title": "Provide information to PII principals",
+   "looks_for": "Provides clear and complete information about processing to PII principals.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_3_4",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.3.4",
+   "title": "Mechanism to modify or withdraw consent",
+   "looks_for": "Provides a mechanism to modify or withdraw consent.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_3_5",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.3.5",
+   "title": "Mechanism to object",
+   "looks_for": "Provides a mechanism to object to processing.",
+   "partial": "Right listed but no dedicated mechanism.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_3_6",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.3.6",
+   "title": "Access, correction and erasure",
+   "looks_for": "Provides means to access, correct and erase PII.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_3_7",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.3.7",
+   "title": "Inform third parties of changes",
+   "looks_for": "Informs third parties of modification, withdrawal or erasure.",
+   "partial": "Only service providers informed.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_3_8",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.3.8",
+   "title": "Provide copy of PII processed",
+   "looks_for": "Provides a copy of PII processed on request.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_3_9",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.3.9",
+   "title": "Handling requests",
+   "looks_for": "Defines handling of PII principal requests, including timelines.",
+   "partial": "Timelines for some jurisdictions only.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_3_10",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.3.10",
+   "title": "Automated decision-making",
+   "looks_for": "Addresses automated decision-making obligations.",
+   "partial": "Scoped to one jurisdiction only.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_4_1",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.4.1",
+   "title": "Limit collection",
+   "looks_for": "Limits PII collection to what is necessary.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_4_5",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.4.5",
+   "title": "De-identification and deletion at end of processing",
+   "looks_for": "States PII is deleted or de-identified when no longer needed.",
+   "partial": "Only 'where feasible'.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_4_7",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.4.7",
+   "title": "Retention",
+   "looks_for": "Defines PII retention periods or schedule.",
+   "partial": "Generic criteria only.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_5_1",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.5.1",
+   "title": "Basis for transfer between jurisdictions",
+   "looks_for": "Identifies the basis for international PII transfers.",
+   "partial": "",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_5_2",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.5.2",
+   "title": "Countries to which PII is transferred",
+   "looks_for": "Identifies the countries or organizations PII may be transferred to.",
+   "partial": "Region/'other countries' only.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_5_4",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex A A.7.5.4",
+   "title": "Records of PII disclosure to third parties",
+   "looks_for": "Identifies third parties/categories to which PII is disclosed (e.g., a subprocessor list).",
+   "partial": "Categories only.",
+   "assessable_in": [
+    "privacy_notice"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.B_8_2_1",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex B B.8.2.1",
+   "title": "Customer agreement",
+   "looks_for": "Agreement addresses processor obligations towards the customer.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": true,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.B_8_2_2",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex B B.8.2.2",
+   "title": "Organization's purposes",
+   "looks_for": "Processing only for the customer's documented purposes; no independent use.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.B_8_2_4",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex B B.8.2.4",
+   "title": "Infringing instruction",
+   "looks_for": "Processor informs customer if an instruction infringes law.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.B_8_3_1",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex B B.8.3.1",
+   "title": "Obligations to PII principals",
+   "looks_for": "Processor assists customer with PII principal obligations.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.B_8_4_2",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex B B.8.4.2",
+   "title": "Return, transfer or disposal of PII",
+   "looks_for": "Defines return, transfer or secure disposal of PII at end of services.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.B_8_5_1",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex B B.8.5.1",
+   "title": "Basis for PII transfer between jurisdictions",
+   "looks_for": "Identifies the basis for international transfers.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.B_8_5_4",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex B B.8.5.4",
+   "title": "Notification of PII disclosure requests",
+   "looks_for": "Processor notifies the customer of disclosure requests from authorities.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.B_8_5_5",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex B B.8.5.5",
+   "title": "Legally binding PII disclosures",
+   "looks_for": "Addresses legally binding disclosures and customer notice where permitted.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.B_8_5_6",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex B B.8.5.6",
+   "title": "Disclosure of subcontractors used",
+   "looks_for": "Discloses subcontractors used to process PII.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.B_8_5_7",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex B B.8.5.7",
+   "title": "Engagement of a subcontractor",
+   "looks_for": "Requires customer authorisation/contract terms before engaging a subcontractor.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.B_8_5_8",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 Annex B B.8.5.8",
+   "title": "Change of subcontractor",
+   "looks_for": "Notifies the customer of subcontractor changes with a chance to object.",
+   "partial": "",
+   "assessable_in": [
+    "dpa"
+   ],
+   "weight": 1,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.5_2",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 5.2",
+   "title": "Role determination and PIMS scope",
+   "looks_for": "Determines whether the organization acts as PII controller and/or processor and defines privacy governance scope.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_4_6_B_8_4_1",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 A.7.4.6/B.8.4.1",
+   "title": "Temporary files",
+   "looks_for": "Defines deletion or sanitization of temporary files created during processing.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_4_8",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 A.7.4.8",
+   "title": "Disposal",
+   "looks_for": "Defines secure disposal procedures for PII and media.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.A_7_4_9_B_8_4_3",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 A.7.4.9/B.8.4.3",
+   "title": "PII transmission controls",
+   "looks_for": "Protects PII transmitted over public networks (e.g., encryption).",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  },
+  {
+   "id": "iso.6_logging",
+   "framework": "iso27701",
+   "citation": "ISO/IEC 27701:2019 6.logging",
+   "title": "Logging and audit trails (via ISO/IEC 27002)",
+   "looks_for": "Logs access to and changes of PII with protected audit trails.",
+   "partial": "",
+   "assessable_in": [
+    "security_policy",
+    "dpa"
+   ],
+   "weight": 2,
+   "critical": false,
+   "na_allowed": false,
+   "na_when": "",
+   "public_disclosure_expected": false,
+   "effective_from": null,
+   "must_match": null,
+   "active": true,
+   "standard": "ISO/IEC 27701:2019"
+  }
+ ]
+}

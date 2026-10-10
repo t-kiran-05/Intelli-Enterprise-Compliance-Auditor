@@ -1,0 +1,129 @@
+{
+  "DocumentId": "uploads/a1b2c3d4/privacy_policy.txt",
+  "Status": "COMPLETED",
+  "scoring_version": "2.0",
+  "overall_score": 82,
+  "OverallScore": 82,
+  "Score": 82,
+  "GdprScore": 85,
+  "Soc2Score": 75,
+  "CcpaScore": 90,
+  "Iso27701Score": 78,
+  "frameworks": {
+    "gdpr": {
+      "score": 85,
+      "status": "COMPLIANT",
+      "summary": "GDPR baseline requirements are largely satisfied with identifiable DPO and lawful bases.",
+      "rationale": "Data subject rights and legal bases under Art. 6 are clearly defined.",
+      "coverage_pct": 92,
+      "critical_gaps": [],
+      "unverifiable": [],
+      "disclosure_only": false
+    },
+    "soc2": {
+      "score": 75,
+      "status": "NEEDS_REVIEW",
+      "summary": "SOC 2 Trust Services Criteria disclosure controls identified.",
+      "rationale": "Security and access control policies stated; operational implementation requires audit trail evidence.",
+      "coverage_pct": 80,
+      "critical_gaps": ["CC6.1 Access controls"],
+      "unverifiable": ["CC6.6 Network boundaries"],
+      "disclosure_only": true
+    },
+    "ccpa": {
+      "score": 90,
+      "status": "COMPLIANT",
+      "summary": "CCPA statutory consumer notices and Do Not Sell disclosures are present.",
+      "rationale": "Opt-out mechanisms and statutory disclosures compliant with CPRA amendments.",
+      "coverage_pct": 95,
+      "critical_gaps": [],
+      "unverifiable": [],
+      "disclosure_only": false
+    },
+    "iso27701": {
+      "score": 78,
+      "status": "NEEDS_REVIEW",
+      "summary": "ISO/IEC 27701 PII governance controls evaluated.",
+      "rationale": "PII controller policies present; explicit retention timelines require documentation.",
+      "coverage_pct": 85,
+      "critical_gaps": [],
+      "unverifiable": [],
+      "disclosure_only": false
+    }
+  },
+  "items": [
+    {
+      "id": "gdpr.13_1_b",
+      "framework": "gdpr",
+      "citation": "Art. 13(1)(b)",
+      "title": "DPO Contact Information",
+      "status": "MET",
+      "document": "privacy_policy.txt",
+      "section": "Contact Information",
+      "evidence_quote": "Contact our Data Protection Officer at dpo@acme.com",
+      "evidence_verified": true,
+      "agreement": 100,
+      "agreement_pct": 100,
+      "note": "Valid email address provided."
+    },
+    {
+      "id": "gdpr.13_2_a",
+      "framework": "gdpr",
+      "citation": "Art. 13(2)(a)",
+      "title": "Data Retention Criteria",
+      "status": "PARTIAL",
+      "document": "privacy_policy.txt",
+      "section": "Data Retention",
+      "evidence_quote": "We retain personal data as long as necessary for business purposes.",
+      "evidence_verified": false,
+      "downgraded_from": "MET",
+      "agreement": 100,
+      "agreement_pct": 100,
+      "note": "Quote not found verbatim in source text; downgraded for evidence verification."
+    },
+    {
+      "id": "ccpa.1798_120",
+      "framework": "ccpa",
+      "citation": "Cal. Civ. Code § 1798.120",
+      "title": "Do Not Sell or Share Notice",
+      "status": "MET",
+      "document": "privacy_policy.txt",
+      "section": "California Rights",
+      "evidence_quote": "We honor the Global Privacy Control signal and do not sell personal information.",
+      "evidence_verified": true,
+      "agreement": 100,
+      "agreement_pct": 100
+    }
+  ],
+  "risks": [
+    {
+      "category": "Data Privacy",
+      "severity": "MEDIUM",
+      "issue": "Indefinite data retention criteria specified.",
+      "location": "Section 4",
+      "recommendation": "Provide explicit retention schedules per data category."
+    }
+  ],
+  "forward_looking": [],
+  "meta": {
+    "scoring_version": "2.0",
+    "as_of": "2026-10-05",
+    "doc_types": ["privacy_notice"],
+    "classification": [{"document": "privacy_policy.txt", "types": ["privacy_notice"], "score": 95}],
+    "soc2_mode": "penalize",
+    "thresholds": {"compliant_min": 85, "review_min": 60},
+    "llm_tier": "free",
+    "llm_data_use_warning": "Gemini API free-tier content may be used by Google to improve its products. Do not audit confidential documents on the free tier.",
+    "model": "gemini-2.5-flash",
+    "passes": 1,
+    "vision_mode": false,
+    "quality": {
+      "not_evaluated": 0,
+      "downgraded_for_evidence": 1,
+      "na_overrides": 0,
+      "items_with_pass_disagreement": 0,
+      "evidence_verifiable": true
+    }
+  }
+}
+
