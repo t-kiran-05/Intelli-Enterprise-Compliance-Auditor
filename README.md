@@ -1,12 +1,24 @@
 # Enterprise AI Compliance Auditing Platform
+### Powered by AWS Serverless (AWS Lambda · Amazon S3 · Amazon DynamoDB · Amazon API Gateway)
 
+[![AWS](https://img.shields.io/badge/AWS-Serverless%20Architecture-orange?style=flat&logo=amazon-aws)](https://aws.amazon.com/)
+[![AWS Lambda](https://img.shields.io/badge/AWS-Lambda%20(Python%203.12)-FF9900?style=flat&logo=awslambda&logoColor=white)](https://aws.amazon.com/lambda/)
+[![Amazon S3](https://img.shields.io/badge/Amazon-S3%20Secure%20Vault-569A31?style=flat&logo=amazons3&logoColor=white)](https://aws.amazon.com/s3/)
+[![Amazon DynamoDB](https://img.shields.io/badge/Amazon-DynamoDB%20Audit%20Store-4053D6?style=flat&logo=amazondynamodb&logoColor=white)](https://aws.amazon.com/dynamodb/)
+[![Amazon API Gateway](https://img.shields.io/badge/Amazon-API%20Gateway-FF4F8B?style=flat&logo=amazonapigateway&logoColor=white)](https://aws.amazon.com/api-gateway/)
 [![Next.js](https://img.shields.io/badge/Next.js-16.2-black?style=flat&logo=next.js)](https://nextjs.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![AWS](https://img.shields.io/badge/AWS-Serverless-orange?style=flat&logo=amazon-aws)](https://aws.amazon.com/)
 [![Supabase](https://img.shields.io/badge/Supabase-Auth%20%26%20Postgres-3ECF8E?style=flat&logo=supabase&logoColor=white)](https://supabase.com/)
 [![Redis](https://img.shields.io/badge/Upstash-Redis%20Rate%20Limit-red?style=flat&logo=redis&logoColor=white)](https://upstash.com/)
 [![Gemini](https://img.shields.io/badge/Google-Gemini%202.5%20Flash-4285F4?style=flat&logo=google)](https://aistudio.google.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+> ### ⚡ Primary Cloud Engine: AWS Serverless Backbone
+> The production platform runs natively on an event-driven **AWS Serverless** architecture designed for enterprise throughput:
+> - 🚀 **AWS Lambda (Python 3.12, 512 MB, 300s)**: High-concurrency serverless engine that asynchronously analyzes contracts, runs multi-pass Gemini reasoning, and deterministically verifies statutory quotes against raw text.
+> - 🗄️ **Amazon S3**: Encrypted multi-part contract ingestion vault with time-limited presigned URLs (`uploads/<uuid>/<filename>`) and automatic S3 event triggers.
+> - ⚡ **Amazon DynamoDB**: Low-latency NoSQL database for real-time audit progress tracking, idempotency locking, and compliance audit logs.
+> - 🌐 **Amazon API Gateway**: Token-authenticated RESTful API endpoints (`/upload`, `/audit`, `/results/{id}`) with CORS isolation and rate protection.
 
 An enterprise-grade contract compliance auditing platform that analyzes legal documents (Privacy Notices, DPAs, Security Policies) against four major regulatory frameworks: **GDPR**, **CCPA / CPRA**, **SOC 2**, and **ISO/IEC 27701**.
 
@@ -16,16 +28,16 @@ Built on a **deterministic verification architecture**: Google Gemini extracts a
 
 ## Interactive Table of Contents
 
-- [Visual Previews](#visual-previews)
-- [System Architecture](#system-architecture)
-- [Primary Cloud Architecture (AWS)](#primary-cloud-architecture-aws)
+- [AWS Serverless Primary Architecture](#primary-cloud-architecture-aws)
+- [Visual Previews & Screenshots](#visual-previews--screenshots)
+- [System Architecture (Dual-Backend Flow)](#system-architecture)
 - [Backup / Secondary Architecture (Render & Supabase)](#backup--secondary-architecture-render--supabase)
 - [Key Features](#key-features)
 - [Quick Start (Local Development)](#quick-start-local-development)
 - [Deployment Guide](#deployment-guide)
-  - [1. Deploy Frontend on Vercel](#1-deploy-frontend-on-vercel)
-  - [2. Deploy Backend on Render](#2-deploy-backend-on-render)
-  - [3. Deploy Primary on AWS](#3-deploy-primary-on-aws)
+  - [1. Deploy Primary on AWS](#3-deploy-primary-on-aws)
+  - [2. Deploy Frontend on Vercel](#1-deploy-frontend-on-vercel)
+  - [3. Deploy Backend on Render](#2-deploy-backend-on-render)
 - [Public Evaluator & Demo Guide](#public-evaluator--demo-guide)
 - [Environment Variables](#environment-variables)
 - [Security & Rate Limiting](#security--rate-limiting)
@@ -34,23 +46,22 @@ Built on a **deterministic verification architecture**: Google Gemini extracts a
 
 ## Visual Previews & Screenshots
 
-### 1. Compliance Dashboard Overview (Dark & Light Mode)
-![Compliance Dashboard Overview](docs/images/Compliance%20Dashboard%20Overview.png)
-*Figure 1: Main compliance overview showing radial gauges, document upload dropzone, and evaluated framework scores.*
+### 1. Compliance Dashboard Overview
+![Compliance Dashboard Overview](docs/images/dashboard-overview.png)
+*Figure 1: Main compliance overview showing radial gauges, document upload zone, and framework health scores.*
 
-![Dashboard Light Mode](docs/images/dashboard-light.png)
-*Figure 2: Clean enterprise light-mode interface with persistent theme toggle.*
+### 2. Multi-Framework Compliance Evaluation Summary
+![Compliance Evaluation Summary](docs/images/compliance-summary.png)
+*Figure 3: Multi-framework assessment breakdown across GDPR, CCPA/CPRA, SOC 2, and ISO/IEC 27701.*
 
-### 2. Framework Compliance Summary & Radar Gauges
-![Compliance Summary](docs/images/compliance-summary.png)
-*Figure 3: Multi-framework assessment across GDPR, CCPA/CPRA, SOC 2, and ISO/IEC 27701.*
+### 3. Identified Risks & Actionable Fix Recommendations
+![Identified Risks and Fixes](docs/images/risks&suggestions.png)
+*Figure 4: Granular findings with severity tagging (Critical, Medium, Low) and concrete remediation suggestions.*
 
-### 3. Risk Heatmap Matrix & Remediation Recommendations
-![Risk Heatmap & Recommendations](docs/images/risk-heatmap%26recommendations.png)
-*Figure 4: 3-Pillar risk matrix classifying issues across Legal, Security, and Operational dimensions.*
+### 4. 3-Pillar Risk Heatmap Matrix
+![Risk Heatmap Matrix](docs/images/risk-heatmap&recommendations.png)
+*Figure 5: Risk matrix classifying findings across Legal, Security, and Operational dimensions.*
 
-![Risks & Suggestions](docs/images/risks%26suggestions.png)
-*Figure 5: Granular findings with severity tagging (Critical, Medium, Low) and actionable recommendations.*
 
 ---
 
